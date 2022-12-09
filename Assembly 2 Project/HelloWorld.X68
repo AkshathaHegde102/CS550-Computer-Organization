@@ -1,0 +1,23 @@
+*-----------------------------------------------------------
+* Title      : Hello World
+* Written by : Akshatha Vasant Hegde
+* Date       : 4/7/22
+* Description: Assembly 2 Project
+*-----------------------------------------------------------
+START   ORG    $1000
+
+        LEA     MESSAGE,A1      message saved to A1
+        MOVE.B  #14,D0          Moves 14 to Data Register
+        TRAP    #15             Displays message
+        
+        MOVE.B  #9,D0           Moves 9 to Data Register
+        TRAP    #15             Halt Simulator
+        
+MESSAGE DC.B    'HELLO WORLD',0     Places string in memory message
+
+        END     START
+
+*~Font name~Courier New~
+*~Font size~10~
+*~Tab type~1~
+*~Tab size~4~
